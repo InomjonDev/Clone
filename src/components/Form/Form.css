@@ -14,6 +14,19 @@
   justify-content: center;
 }
 
+.form__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.form__bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .form__left-img {
   position: relative;
   top: 0;
@@ -26,152 +39,97 @@
   left: 156px;
 }
 
-
-
-.p {
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  margin-top: 12px;
-}
-
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  height: 100%;
-
+.form__right-top {
+  min-width: 350px;
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.navbar-left {
-  background-image: url("  https://www.instagram.com/static/images/homepage/phones/home-phones.png/1dc085cdb87d.png");
-  background-repeat: no-repeat;
-  width: 465px;
-  height: 635px;
-  height: 635px;
-
-  margin-right: 10px;
-  position: relative;
-  top: 28px;
-  left: 155px;
-}
-
-.navbar-right {
-  background-color: #fff;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 0;
+  margin-bottom: 10px;
   border: 1px solid #dbdbdb;
   border-radius: 1px;
-  padding: 10px 0;
-
-  width: 350px;
-  height: 395px;
-
-  margin-top: -200px;
 }
 
-.logo {
+.form__right-form {
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  margin-bottom: 25px;
-  margin-top: 25px;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 
-.navbar-right-form {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.navbar-right__input {
-  font-size: 16px;
-  padding: 9px 0px 7px 8px;
-  width: 265px;
-  height: 36px;
-
+.form__right-form input {
+  width: 70%;
+  margin-bottom: 6px;
+  padding: 7px 9px;
   background-color: #fafafa;
-
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-
-  font-size: 12px;
-  font-weight: 100;
-}
-
-.navbar-right__input:focus {
-  outline: none;
-}
-
-.navbar-right__input::placeholder {
-  font-size: 13px;
-  line-height: 16px;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.navbar-right__text {
-  color: #8e8e88;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 15px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-.navbar-right__facebook {
-  color: #385185;
-
-  margin-bottom: 10px;
-}
-
-.navbar-right__btn {
-  background-color: #b2dffc;
-  width: 267px;
-  height: 30px;
-  color: #fff;
-  margin-top: 10px;
-}
-
-.navbar-right__btn:hover {
-  cursor: pointer;
-}
-
-.navbar-right__link {
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-}
-
-.footer__links {
-  text-align: center;
-}
-
-.footer__links a {
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 1px;
-
-  padding: 10px 15px 10px 0;
-  color: #8e8e8e;
-}
-
-.navbar-right__bottom {
-  margin-top: 100px;
   border: 1px solid #dbdbdb;
-}
 
-.navbar-right-bottom-text {
-  margin: 10px;
-  padding: 10px;
-}
-
-.navbar-right-bottom-text p {
+  border-radius: 1px;
+  outline: none;
   font-size: 14px;
-  text-align: center;
+
+  transition: 0.3s;
 }
 
-.markets {
-  text-align: center;
-  margin-top: 12px;
+.form__right-form input::placeholder {
+  font-size: 12px;
+}
+
+.form__right-form input:focus {
+  border-color: #a8a8a8;
+}
+
+.form__right-form button {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  width: 80%;
+  background-color: #0095f6;
+  opacity: 0.7;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  padding: 7px 16px;
+}
+
+.form__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form__right-logo {
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+.form__right-or {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 8px 0;
+  position: relative;
+}
+
+.form__right-or::before {
+  content: "";
+  position: absolute;
+  top: 0.55rem;
+  right: 50px;
+  width: 100px;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.form__right-or::after {
+  content: "";
+  position: absolute;
+  top: 0.55rem;
+  left: 50px;
+  width: 100px;
+  height: 1px;
+  background-color: #dbdbdb;
 }
