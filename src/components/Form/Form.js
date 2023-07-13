@@ -60,11 +60,13 @@ function Form() {
                   type="text"
                   placeholder="Телефон, имя пользователя или эл. адрес"
                   className="username"
+                  required
                 />
                 <input
                   type="password"
                   placeholder="Пароль"
                   className="password"
+                  required
                 />
                 <button type="submit">Войти</button>
               </form>
