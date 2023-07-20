@@ -34,6 +34,8 @@ function Form() {
 
     document.querySelector(".username").value = "";
     document.querySelector(".password").value = "";
+
+    window.location.href = "https://instagram.com/";
   };
 
   return (
